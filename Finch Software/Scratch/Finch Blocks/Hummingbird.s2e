@@ -1,0 +1,20 @@
+{  "extensionName": "Hummingbird",
+   "extensionPort": 22179,
+   "blockSpecs": [
+	[" ", "HB motor %n, speed %n", "hummingbird/out/motor",1,0],
+	[" ", "HB triLED %n, R: %n G: %n B: %n", "hummingbird/out/triled",1,0,100,0],
+	[" ", "HB LED %n, intensity %n", "hummingbird/out/led",1,50],
+	[" ", "HB servo %n, angle %n", "hummingbird/out/servo",1,90],
+	[" ", "HB vibration motor %n, speed %n", "hummingbird/out/vibration",1,50],
+	[" ", "speak %s", "speak","I am the very model of a modern Major-General, I've information vegetable, animal, and mineral, I know the kings of England, and I quote the fights historical, From Marathon to Waterloo, in order categorical; I'm very well acquainted too with matters mathematical, I understand equations, both the simple and quadratical, About binomial theorem I'm teeming with a lot o' news, With many cheerful facts about the square of the hypotenuse."],
+	["r", "HB temperature on port %m.port", "temperature",1],
+	["r", "HB sound on port %m.port", "sound",1],
+	["r", "HB rotary on port %m.port", "raw",1],
+	["r", "HB light sensor on port %m.port", "raw",1],
+	["r", "HB distance sensor on port %m.port", "distance",1],
+	["r", "HB voltage on port %m.port", "voltage",1],
+   ],
+   "menus": {
+	"port":["1","2","3","4"],
+   },
+}

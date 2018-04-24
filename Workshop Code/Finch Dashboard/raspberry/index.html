@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Finch Controller Lite</title>
+	<meta name="description" content="Finch Controller Lite">
+	<meta name="author" content="PUE">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<header>
+		<img src="assets/images/lego.png">
+		Finch Controller <strong>Lite</strong>
+		
+		<div style="float:right">
+			<span class="fa fa-plug"></span> <strong id="finch-ip" style="cursor:pointer">IP Robot Finch:</strong>
+			<input id="finch-address" type="text" value="localhost:22180" placeholder="<ip-address>:<port>" readonly>
+		</div>			
+	</header>
+	<section class="container">
+
+		<section id="led-container">
+			<section class="preference">
+				<div>
+					<div class="caption">
+					    <strong>Finch LED</strong>
+					</div>
+					<label><input type="checkbox" id="finch-led" /><label class="switch" for="finch-led">Toggle</label></label>
+				</div>
+
+				<div>
+					<div class="caption">Red (0-255)</div>
+					<label for="led-red" class="brightness fa">
+						<input id="led-red" name="led-red" type="range" class="led" min="0" max="255" step="17" value="0">
+					</label>
+				</div>
+				
+				<div>
+					<div class="caption">Green (0-255)</div>
+					<label for="led-green" class="brightness fa">
+						<input id="led-green" name="led-green" type="range" class="led" min="0" max="255" step="17" value="0">
+					</label>
+				</div>
+
+				<div>
+				
+					<div class="caption">Blue (0-255)</div>
+					<label for="led-blue" class="brightness fa">
+						<input id="led-blue" id="led-blue" type="range" class="led" min="0" max="255" step="17" value="0">
+					</label>
+				</div>
+
+                <div>
+				
+					<div class="caption"><strong>Color:</strong> <span id="led-color">#000000</span></div>
+					<label>
+						<div id="led-color-sample"></div>
+					</label>
+				</div>
+
+               
+			</section>
+
+            <section class="preference">
+                <div>
+                    <div class="caption">
+                        <span class="fa fa-thermometer-half"></span> <strong>Temperatura actual:</strong>
+                        <label><span id="temperature"></span> ºC</label>
+                    </div>
+                    
+                </div>
+             </section>
+		</section>
+
+        <section id="joystick-container">
+			
+                <section class="preference">
+                    <div>
+					    <div class="caption"><strong>Finch PAD</strong></div>
+						<label><input type="checkbox" id="finch-lights" /><label class="switch" for="finch-lights">Toggle</label></label>
+					   
+				    </div>
+                    <div class="pad" tabindex="0">
+                        <div id="joystick"></div>
+                        
+                        <div>
+                            <strong><em>-Pulsar para activar el pad-</em></strong><br/>
+                            <small>
+                            <span class="fa fa-arrow-circle-up"></span> Adelante
+                            <span class="fa fa-arrow-circle-down"></span> Atrás 
+                            <span class="fa fa-arrow-circle-left"></span> Izquierda 
+                            <span class="fa fa-arrow-circle-right"></span> Derecha 
+                            <span class="fa fa-keyboard-o"></span> Claxon
+                            </small>
+                        </div>
+                    </div>
+                </section>
+              
+			  <section class="preference">
+                <div>
+                    <div class="caption">
+                        <span class="fa fa-lightbulb-o"></span> <strong>Nivel de luz 1:</strong>
+                       
+						<label class="brightness fa">
+							<input id="light-level-1" type="range" min="0" max="100" step="1" value="0" disabled>
+						</label>
+                    </div>
+                </div>
+             </section>
+		</section>
+		
+		<section id="finch-container">
+			
+                <section class="preference">
+                    <div>
+					    <div class="caption"><strong>Detector de Obstáculos</strong></div>
+					    <label><input type="checkbox" id="finch-collisions"/><label class="switch" for="finch-collisions">Toggle</label></label>
+					   
+				    </div>
+					<div class="pad" tabindex="0">
+						<div id="finch">
+			
+							<div id="finch-obs-left" class="led-box">
+								<div class="led-green"></div>
+							</div>
+						  
+							<div  id="finch-obs-right" class="led-box">
+								<div class="led-green"></div>
+							</div>
+						
+						</div>
+						<div>
+							<strong><em>-Pulsar para activar el pad-</em></strong><br/>
+							
+						</div>
+					  
+					</div>
+                </section>
+                <section class="preference">
+                <div>
+                    <div class="caption">
+                        <span class="fa fa-lightbulb-o"></span> <strong>Nivel de luz 2:</strong>
+                       
+						<label class="brightness fa">
+							<input id="light-level-2" type="range" min="0" max="100" step="1" value="0" disabled>
+						</label>
+                    </div>
+                    
+                </div>
+             </section>
+		</section>
+		
+        
+	</section>
+    <section class="container">
+		<section id="finch-speak">
+		    <section class="preference">
+				<div>
+					<div class="caption"><strong>Finch dice: </strong></div>
+					<label style="width: 85%">
+							<input id="finch-says" type="text" value="" placeholder="Escribe tu mensaje aquí...">
+					</label>
+				</div>
+			</section>
+		</section>
+		
+		<section id="piano-mode">
+		    <section class="preference">
+				<div>
+					<div class="caption" style="text-align: center"><strong><a href="piano.html" target="_blank">Acceso a modo piano</a></strong></div>
+					
+				</div>
+			</section>
+		</section>
+	</section>
+	<footer>
+
+	
+	
+	</footer>
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/finch.js"></script>
+    </body>
+</html>

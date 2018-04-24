@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Finch Virtual Piano</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/piano.css" media="all">
+	
+</head>
+<body>
+	<header>
+		<h1><span itemprop="name">Finch Virtual Piano</span></h1>
+	</header>
+	<section id="piano" class="">
+		<div class="keyboard">
+			<ul class="scale oct2">
+				<li class="C white"><a href="#" onmousedown="playNote(1, 2, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO</span></a></li>
+				<li class="Cd black"><a href="#" onmousedown="playNote(2, 2, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO#</span></a></li>
+				<li class="D white"><a href="#" onmousedown="playNote(3,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE</span></a></li>
+				<li class="Eb black"><a href="#" onmousedown="playNote(4,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE#</span></a></li>
+				<li class="E white"><a href="#" onmousedown="playNote(5,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">MI</span></a></li>
+				<li class="F white"><a href="#" onmousedown="playNote(6,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA</span></a></li>
+				<li class="Fd black"><a href="#" onmousedown="playNote(7,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA♯</span></a></li>
+				<li class="G white"><a href="#" onmousedown="playNote(8,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL</span></a></li>
+				<li class="Gd black"><a href="#" onmousedown="playNote(9,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL♯</span></a></li>
+				<li class="A white"><a href="#" onmousedown="playNote(10,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA</span></a></li>
+				<li class="Bb black"><a href="#" onmousedown="playNote(11,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA#</span></a></li>
+				<li class="B white"><a href="#" onmousedown="playNote(12,  2,this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SI</span></a></li>
+			</ul>
+			<ul class="scale oct3">
+				<li class="C white"><a href="#" onmousedown="playNote(1, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO</span></a></li>
+				<li class="Cd black"><a href="#" onmousedown="playNote(2, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO#</span></a></li>
+				<li class="D white"><a href="#" onmousedown="playNote(3, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE</span></a></li>
+				<li class="Eb black"><a href="#" onmousedown="playNote(4, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE#</span></a></li>
+				<li class="E white"><a href="#" onmousedown="playNote(5, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">MI</span></a></li>
+				<li class="F white"><a href="#" onmousedown="playNote(6, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA</span></a></li>
+				<li class="Fd black"><a href="#" onmousedown="playNote(7, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA♯</span></a></li>
+				<li class="G white"><a href="#" onmousedown="playNote(8, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL</span></a></li>
+				<li class="Gd black"><a href="#" onmousedown="playNote(9, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL♯</span></a></li>
+				<li class="A white"><a href="#" onmousedown="playNote(10, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA</span></a></li>
+				<li class="Bb black"><a href="#" onmousedown="playNote(11, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA#</span></a></li>
+				<li class="B white"><a href="#" onmousedown="playNote(12, 3, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SI</span></a></li>
+			</ul>
+			<ul class="scale oct4">
+				<li class="C white"><a href="#" onmousedown="playNote(1, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO</span></a></li>
+				<li class="Cd black"><a href="#" onmousedown="playNote(2, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">DO#</span></a></li>
+				<li class="D white"><a href="#" onmousedown="playNote(3, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE</span></a></li>
+				<li class="Eb black"><a href="#" onmousedown="playNote(4, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">RE#</span></a></li>
+				<li class="E white"><a href="#" onmousedown="playNote(5, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">MI</span></a></li>
+				<li class="F white"><a href="#" onmousedown="playNote(6, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA</span></a></li>
+				<li class="Fd black"><a href="#" onmousedown="playNote(7, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">FA♯</span></a></li>
+				<li class="G white"><a href="#" onmousedown="playNote(8, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);"  onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL</span></a></li>
+				<li class="Gd black"><a href="#" onmousedown="playNote(9, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SOL♯</span></a></li>
+				<li class="A white"><a href="#" onmousedown="playNote(10, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA</span></a></li>
+				<li class="Bb black"><a href="#" onmousedown="playNote(11, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">LA#</span></a></li>
+				<li class="B white"><a href="#" onmousedown="playNote(12, 4, this.parentNode);" onmouseup="pauseNote(this.parentNode);" onmouseout="pauseNote(this.parentNode);" onclick="return false;" draggable="false"><span class="">SI</span></a></li>
+			</ul>
+		</div>
+	</section>
+	
+	<footer id="help">
+		<div> <a href="#" onclick="toggle3D();return false;" draggable="false"><span>3D <span id="3dstatus">OFF</span></span></a></div>
+		
+	</footer>
+	
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/piano.js"></script>
+	
+</body></html>
